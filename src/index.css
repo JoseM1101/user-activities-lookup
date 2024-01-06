@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --side-padding: 50px;
+  --margin-top: 15px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Verdana";
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 var(--side-padding);
+}
+
+main {
+  padding: 50px var(--side-padding);
+}
+
+.user-activities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  width: 100%;
+  margin-top: var(--margin-top);
+}
+
+.activity {
+  border: 1px solid #000;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.monthly-stats-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: var(--margin-top);
+}
+
+.no-activities {
+  pointer-events: none;
+}
+
+.no-activities-text,
+.monthly-total-stats {
+  margin-top: 10px;
+}
+
+.monthly-data-wrapper {
+  cursor: pointer;
+}
+
+.back-btn {
+  margin-top: var(--margin-top);
+  cursor: pointer;
 }
